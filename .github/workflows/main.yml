@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Sync forked repository
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        with:
+          target-branch: main
+          upstream-repository: Yidadaa/ChatGPT-Next-Web
+
+      # Add other steps here that need to be executed after the forked repository is synced

@@ -123,7 +123,9 @@ We recommend that you follow the steps below to re-deploy:
 - Use the fork button in the upper right corner of the page to fork this project;
 - Choose and deploy in Vercel again, [please see the detailed tutorial](./docs/vercel-cn.md).
 
-### Enable Automatic Updates
+### Manually Syncing the Fork
+
+If you encounter a failure of Upstream Sync execution, please manually sync your fork once for instructions. The GitHub documentation [has detailed information on how to synchronize a forked project with upstream code](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) and [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) has detailed information on how to synchronize a forked project with upstream code.
 
 > If you encounter a failure of Upstream Sync execution, please manually sync fork once.
 
@@ -133,9 +135,11 @@ After forking the project, due to the limitations imposed by GitHub, you need to
 
 ![Enable Automatic Updates](./docs/images/enable-actions-sync.jpg)
 
-### Manually Updating Code
+### Manually Syncing the Fork
 
-If you want to update instantly, you can check out the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code.
+If you encounter a failure of Upstream Sync execution, please manually sync your fork once for instructions. The GitHub documentation [has detailed information on how to synchronize a forked project with upstream code](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) and [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) has detailed information on how to synchronize a forked project with upstream code.
+
+The GitHub documentation [has detailed information on how to synchronize a forked project with upstream code](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
 You can star or watch this project or follow author to get release notifications in time.
 

@@ -127,7 +127,7 @@ We recommend that you follow the steps below to re-deploy:
 
 > If you encounter a failure of Upstream Sync execution, please manually sync fork once.
 
-After forking the project, due to the limitations imposed by GitHub, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:
+After forking the project, it's important that you manually sync the forked repository and resolve any merge conflicts that may arise. Detailed instructions on this process can be found in the [manual-sync guide](./docs/manual-sync.md). Additionally, due to the limitations imposed by GitHub, you need to enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:the forked repository and resolve any merge conflicts that may arise. Detailed instructions on this process can be found in the [manual-sync guide](./docs/manual-sync.md). Additionally, due to the limitations imposed by GitHub, you need to enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:
 
 ![Automatic Updates](./docs/images/enable-actions.jpg)
 

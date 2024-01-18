@@ -58,6 +58,9 @@ git clone https://github.com/Yidadaa/ChatGPT-Next-Web
 cd ChatGPT-Next-Web
 yarn install
 
+# Call the sync_fork script
+scripts/sync_fork.sh
+
 # Prompt user for environment variables
 read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
 read -p "Enter CODE: " CODE

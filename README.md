@@ -123,19 +123,44 @@ We recommend that you follow the steps below to re-deploy:
 - Use the fork button in the upper right corner of the page to fork this project;
 - Choose and deploy in Vercel again, [please see the detailed tutorial](./docs/vercel-cn.md).
 
-### Enable Automatic Updates
+## Manual Sync
 
-> If you encounter a failure of Upstream Sync execution, please manually sync fork once.
+If you encounter a failure of Upstream Sync execution, please manually sync your fork by following these steps:
+
+1. Delete the original forked repository.
+2. Fork the upstream repository again.
+3. Redeploy the project on Vercel.
+4. Enable Workflows and Upstream Sync Action on the Actions page of the forked repository.
+
+## Manual Sync
+
+If you encounter a failure of Upstream Sync execution, please manually sync your fork by following these steps:
+
+1. Delete the original forked repository.
+2. Fork the upstream repository again.
+3. Redeploy the project on Vercel.
+4. Enable Workflows and Upstream Sync Action on the Actions page of the forked repository.
+5. Automatic updates will be scheduled every hour.
+
+
 
 After forking the project, due to the limitations imposed by GitHub, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:
 
 ![Automatic Updates](./docs/images/enable-actions.jpg)
 
-![Enable Automatic Updates](./docs/images/enable-actions-sync.jpg)
+![Automatic Updates](./docs/images/enable-actions.jpg)
 
-### Manually Updating Code
+## Manual Sync
 
-If you want to update instantly, you can check out the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code.
+If you encounter a failure of Upstream Sync execution, please manually sync your fork by following these steps:
+
+1. Delete the original forked repository.
+2. Fork the upstream repository again.
+3. Redeploy the project on Vercel.
+4. Enable Workflows and Upstream Sync Action on the Actions page of the forked repository.
+5. Automatic updates will be scheduled every hour.
+
+![Automatic Updates](./docs/images/enable-actions.jpg) [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code.
 
 You can star or watch this project or follow author to get release notifications in time.
 

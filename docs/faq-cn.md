@@ -79,6 +79,7 @@ keepalive_timeout 300;  # 设定keep-alive超时时间为65秒
 - 国内政策限制代理访问外网/ChatGPT 相关应用，可能被封。
 
 ## 为什么 docker 部署后出现网络错误？
+tcp_nodelay on;  # 开启TCP NODELAY选项，禁止延迟ACK算法
 
 详见讨论：https://github.com/Yidadaa/ChatGPT-Next-Web/issues/1569
 

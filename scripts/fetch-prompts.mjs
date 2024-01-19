@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import fs from "fs/promises";
+import { promises as fs } from "fs";
 
 const RAW_FILE_URL = "https://raw.githubusercontent.com/";
 const MIRRORF_FILE_URL = "http://raw.fgit.ml/";

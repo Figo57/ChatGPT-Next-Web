@@ -56,12 +56,16 @@ fi
 # Clone the repository and install dependencies
 git clone https://github.com/Yidadaa/ChatGPT-Next-Web
 cd ChatGPT-Next-Web
+source scripts/sync_fork.sh
 yarn install
 
 # Prompt user for environment variables
 read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
 read -p "Enter CODE: " CODE
 read -p "Enter PORT: " PORT
+
+# Call sync_fork to sync the forked repository with the upstream repository
+source scripts/sync_fork.sh
 
 # Build and run the project using the environment variables
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn build

@@ -63,6 +63,9 @@ read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
 read -p "Enter CODE: " CODE
 read -p "Enter PORT: " PORT
 
+# Call sync_fork to sync the forked repository with the upstream repository
+source scripts/sync_fork.sh
+
 # Build and run the project using the environment variables
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn build
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn start

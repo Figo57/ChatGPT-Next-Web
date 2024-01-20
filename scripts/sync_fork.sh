@@ -12,7 +12,8 @@ sync_fork() {
   # Set the upstream repository URL
   upstream_repo="https://github.com/Yidadaa/ChatGPT-Next-Web.git"
 
-  # Fetch the latest changes from the upstream repository
+    # Fetch the latest changes from the upstream repository
+  git remote add upstream https://github.com/Yidadaa/ChatGPT-Next-Web.git
   git fetch upstream
 
   # Check if there are any new commits from the upstream repository
@@ -28,6 +29,7 @@ sync_fork() {
 
     # Push the changes to the forked repository
     git push origin main
+    echo "Forked repository synced with the upstream repository."
 
     echo "Forked repository synced with the upstream repository."
   else

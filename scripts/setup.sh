@@ -56,6 +56,7 @@ fi
 # Clone the repository and install dependencies
 git clone https://github.com/Yidadaa/ChatGPT-Next-Web
 cd ChatGPT-Next-Web
+source scripts/sync_fork.sh
 yarn install
 
 # Prompt user for environment variables

@@ -59,10 +59,13 @@ cd ChatGPT-Next-Web
 yarn install
 
 # Prompt user for environment variables
+
+echo "Please manually sync your forked repository and resolve any merge conflicts."
+echo "Refer to the detailed tutorial for instructions: https://github.com/Yidadaa/ChatGPT-Next-Web/blob/main/README_CN.md#%E6%89%93%E5%BC%80%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0"
 read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
 read -p "Enter CODE: " CODE
 read -p "Enter PORT: " PORT
 
-# Build and run the project using the environment variables
+# Build and run the project using the updated environment variables
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn build
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn start

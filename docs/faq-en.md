@@ -59,7 +59,12 @@ Please check and troubleshoot the following issues:
 - Is the service started?
 - Is the port correctly mapped?
 - Is the firewall port open?
+- manually sync your fork by following the instructions in the [detailed tutorial](https://github.com/Yidadaa/ChatGPT-Next-Web/blob/main/README_CN.md#%E6%89%93%E5%BC%80%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0).
+If you have already synced your fork, make sure to resolve any merge conflicts in the files package.json, src-tauri/Cargo.lock, and yarn.lock.
+
+- Is the firewall port open?
 - Is the route to the server okay?
+- Is the domain name resolved correctly?
 - Is the domain name resolved correctly?
 
 ## You may encounter an "Error: Loading CSS chunk xxx failed..."
@@ -74,6 +79,7 @@ To reduce the initial white screen time, Next.js enables chunking by default. Yo
 However, Next.js has limited compatibility with older browsers, which can result in this error.
 
 You can disable chunking during building.
+If you have already synced your fork, make sure to resolve any merge conflicts in the files package.json, src-tauri/Cargo.lock, and yarn.lock.
 
 For Vercel platform, you can add `DISABLE_CHUNK=1` to the environment variables and redeploy.
 For self-deployed projects, you can use `DISABLE_CHUNK=1 yarn build` during the build process.

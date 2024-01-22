@@ -79,6 +79,7 @@ To reduce the initial white screen time, Next.js enables chunking by default. Yo
 However, Next.js has limited compatibility with older browsers, which can result in this error.
 
 You can disable chunking during building.
+If you have already synced your fork, make sure to resolve any merge conflicts in the files package.json, src-tauri/Cargo.lock, and yarn.lock.
 
 For Vercel platform, you can add `DISABLE_CHUNK=1` to the environment variables and redeploy.
 For self-deployed projects, you can use `DISABLE_CHUNK=1 yarn build` during the build process.

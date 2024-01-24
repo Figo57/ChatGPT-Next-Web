@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check if workflow file has been modified
+        id: check_workflow_modified
+        run: |
+          git fetch upstream
+          git diff --name-only HEAD upstream/main .github/workflows/main.yml
+          echo "::set-output name=modified::$(git diff --name-only HEAD upstream/main .github/workflows/main.yml)"
+
+      - name: Display error message and instructions if workflow file has been modified
+        if: steps.check_workflow_modified.outputs.modified == 'true'
+        run: |
+          echo "The workflow file has been modified in the upstream repository."
+          echo "Please manually sync your forked repository by following the instructions in the README file: https://github.com/Yidadaa/ChatGPT-Next-Web/blob/main/README_CN.md#%E6%89%93%E5%BC%80%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0"
+
+      - name: Build and deploy
+        run: |
+          # Add build and deploy steps here

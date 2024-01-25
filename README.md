@@ -168,7 +168,6 @@ Your openai api key.
 > Default: `https://api.openai.com`
 
 > Examples: `http://your-openai-proxy.com`
-
 Override openai api request base url.
 
 ### `OPENAI_ORG_ID` (optional)

@@ -141,7 +141,39 @@ Vercel 是一个全球化的云平台，旨在帮助开发人员更快地构建�
 2. 免费的域名供应商：eu.org(二级域名)等；
 3. 问朋友要一个免费的二级域名。
 
-## 如何获得一台服务器
+## 如何手动同步 forked 仓库和解决合并冲突
+如果遇到合并冲突，可以按照以下步骤手动同步 forked 仓库并解决合并冲突：
+1. 切换到 `main` 分支：
+   ```
+   git checkout main
+   ```
+2. 从远程仓库拉取所有变更：
+   ```
+   git fetch --all
+   ```
+3. 重置本地分支以匹配远程分支：
+   ```
+   git reset --hard origin/main
+   ```
+4. 创建一个新分支来解决合并冲突：
+   ```
+   git checkout -b resolve-merge-conflict
+   ```
+5. 将远程分支的变更合并到新分支：
+   ```
+   git merge --no-ff --no-commit origin/main
+   ```
+   解决 `src-tauri/Cargo.lock` 和 `yarn.lock` 中的合并冲突。
+6. 提交变更：
+   ```
+   git commit -m "解决合并冲突"
+   ```
+7. 将变更推送到远程仓库：
+   ```
+   git push origin resolve-merge-conflict
+   ```
+8. 根据仓库文档提供的说明手动同步 forked 仓库。
+- 如何获得一台服务器
 
 - 国外服务器供应商举例：亚马逊云，谷歌云，Vultr，Bandwagon，Hostdare，等等；
   国外服务器事项：服务器线路影响国内访问速度，推荐 CN2 GIA 和 CN2 线路的服务器。若服务器在国内访问困难（丢包严重等），可以尝试套 CDN（Cloudflare 等供应商）。
@@ -210,6 +242,14 @@ OpenAI 只接受指定地区的信用卡（中国信用卡无法使用）。一�
   - 如果 docker 日志发现大量 got access code 爆破记录，那么就是密码被爆破了。
 
 ## API 是怎么计费的？
+
+# 如何解决合并冲突
+如果在合并中遇到冲突，请按照以下步骤解决合并冲突：
+1. 检查是否存在合并冲突。
+2. 使用以下命令解决合并冲突：
+   ```
+   git merge --continue
+   ```
 
 OpenAI 网站计费说明：https://openai.com/pricing#language-models  
 OpenAI 根据 token 数收费，1000 个 token 通常可代表 750 个英文单词，或 500 个汉字。输入（Prompt）和输出（Completion）分别统计费用。  

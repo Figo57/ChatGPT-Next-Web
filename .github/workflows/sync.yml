@@ -27,6 +27,33 @@ jobs:
           upstream_sync_repo: Yidadaa/ChatGPT-Next-Web
           upstream_sync_branch: main
           target_sync_branch: main
+                    # Step 3: Add step to resolve merge conflict
+          - name: Resolve merge conflict
+            run: |
+              git checkout main
+              git fetch --all
+              git reset --hard origin/main
+              git checkout -b resolve-merge-conflict
+              git merge --no-ff --no-commit origin/main
+              # Resolve merge conflict in src-tauri/Cargo.lock and yarn.lock
+              # git commit -m "Resolve merge conflict"
+              # git push origin resolve-merge-conflict
+
+          # Step 4: Commit the changes
+          - name: Commit changes
+            run: |
+              git add src-tauri/Cargo.lock
+              git add yarn.lock
+              git commit -m "Resolve merge conflict"
+              git push origin resolve-merge-conflict
+
+          # Step 5: Manually sync the forked repository
+          - name: Manually sync fork
+            run: |
+              # Provide instructions for manual sync of the forked repository
+              echo "Manually sync the forked repository"
+              echo "Detailed tutorial to resolve merge conflict: https://github.com/Yidadaa/ChatGPT-Next-Web#resolve-merge-conflict"
+
           target_repo_token: ${{ secrets.GITHUB_TOKEN }} # automatically generated, no need to set
 
           # Set test_mode true to run tests instead of the true action!!

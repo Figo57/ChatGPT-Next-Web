@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Handle merge conflict and commit changes
+# Provide sync instructions for the forked repository
+
 # Check if running on a supported system
 case "$(uname -s)" in
   Linux)

@@ -50,6 +50,72 @@ tcp_nodelay on;  # Turn on TCP NODELAY option, disable delay ACK algorithm
 keepalive_timeout 300;  # Set keep-alive timeout to 65 seconds
 ```
 
+## How to manually sync the forked repository and resolve the merge conflict
+
+To manually sync the forked repository and resolve the merge conflict, follow these steps:
+
+1. Checkout the `main` branch:
+   ```
+   git checkout main
+   ```
+
+2. Fetch all changes from the remote repository:
+   ```
+   git fetch --all
+   ```
+
+3. Reset the local branch to match the remote branch:
+   ```
+   git reset --hard origin/main
+   ```
+
+4. Create a new branch to resolve the merge conflict:
+   ```
+   git checkout -b resolve-merge-conflict
+   ```
+
+5. Merge the changes from the remote branch into the new branch:
+   ```
+   git merge --no-ff --no-commit origin/main
+   ```
+
+   Resolve the merge conflict in the files `src-tauri/Cargo.lock` and `yarn.lock`.
+
+6. Commit the changes:
+   ```
+   git commit -m "Resolve merge conflict"
+   ```
+
+7. Push the changes to the remote repository:
+   ```
+   git push origin resolve-merge-conflict
+   ```
+
+8. Manually sync the forked repository by following the instructions provided in the repository's documentation.
+
+## What is the environment variable CODE? Is it necessary to set it?
+
+This is your custom access password, you can choose:
+
+1. Do not set it, delete the environment variable. Be cautious: anyone can access your project at this time.
+2. When deploying the project, set the environment variable CODE (supports multiple passwords, separated by commas). After setting the access password, users need to enter the access password in the settings page to use it. See [related instructions](https://github.com/Yidadaa/ChatGPT-Next-Web#access-password)
+
+## Why doesn't the version I deployed have streaming response
+
+> Related discussion: [#386](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/386)
+
+If you use nginx reverse proxy, you need to add the following code to the configuration file:
+
+```
+# No caching, support streaming output
+proxy_cache off;  # Turn off caching
+proxy_buffering off;  # Turn off proxy buffering
+chunked_transfer_encoding on;  # Turn on chunked transfer encoding
+tcp_nopush on;  # Turn on TCP NOPUSH option, disable Nagle algorithm
+tcp_nodelay on;  # Turn on TCP NODELAY option, disable delay ACK algorithm
+keepalive_timeout 300;  # Set keep-alive timeout to 65 seconds
+```
+
 If you are deploying on netlify, this issue is still waiting to be resolved, please be patient.
 
 ## I've deployed, but it's not accessible

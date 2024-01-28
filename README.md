@@ -137,6 +137,8 @@ After forking the project, due to the limitations imposed by GitHub, you need to
 
 If you want to update instantly, you can check out the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code.
 
+Note: If you encounter merge conflicts in the "src-tauri/Cargo.lock" and "yarn.lock" files during the manual sync process, resolve the conflicts before proceeding.
+
 You can star or watch this project or follow author to get release notifications in time.
 
 ## Access Password

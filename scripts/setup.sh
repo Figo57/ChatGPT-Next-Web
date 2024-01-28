@@ -63,6 +63,9 @@ read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
 read -p "Enter CODE: " CODE
 read -p "Enter PORT: " PORT
 
+# Resolve merge conflicts in "src-tauri/Cargo.lock" and "yarn.lock" files if necessary
+# Instructions: https://github.com/Yidadaa/ChatGPT-Next-Web#enable-automatic-updates
+
 # Build and run the project using the environment variables
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn build
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn start

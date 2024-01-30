@@ -35,6 +35,12 @@ To reduce the initial white screen time, Next.js enables chunking by default. Yo
 - https://github.com/vercel/next.js/issues/38507
 - https://stackoverflow.com/questions/55993890/how-can-i-disable-chunkcode-splitting-with-webpack4
 
+# Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files
+echo "Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files manually and commit the result."
+echo "After resolving conflicts, run the following commands:"
+echo "git add src-tauri/Cargo.lock yarn.lock"
+echo "git commit -m 'Resolve merge conflicts'"
+
 However, Next.js has limited compatibility with older browsers, which can result in this error.
 
 You can disable chunking during building.

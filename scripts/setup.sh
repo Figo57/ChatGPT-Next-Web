@@ -10,10 +10,19 @@ case "$(uname -s)" in
         exit 1
       fi
     else
-      if [[ !"$(cat /etc/*-release | grep '^ID=')" =~ ^(ID=\"ubuntu\")|(ID=\"centos\")|(ID=\"arch\")|(ID=\"debian\")$ ]]; then
+    if [[ !"$(cat /etc/*-release | grep '^ID=')" =~ ^(ID=\"ubuntu\")|(ID=\"centos\")|(ID=\"arch\")|(ID=\"debian\")$ ]]; then
         echo "Unsupported Linux distribution."
         exit 1
-      fi
+    fi
+    ;;
+    Darwin)
+    echo "Running on MacOS."
+    ;;
+    *)
+    echo "Unsupported operating system."
+    exit 1
+    ;;
+    esac
     fi
     ;;
   Darwin)
@@ -66,3 +75,8 @@ read -p "Enter PORT: " PORT
 # Build and run the project using the environment variables
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn build
 OPENAI_API_KEY=$OPENAI_API_KEY CODE=$CODE PORT=$PORT yarn start
+# Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files
+echo "Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files manually and commit the result."
+echo "After resolving conflicts, run the following commands:"
+echo "git add src-tauri/Cargo.lock yarn.lock"
+echo "git commit -m 'Resolve merge conflicts'"

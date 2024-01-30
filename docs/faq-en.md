@@ -1,40 +1,4 @@
-# Frequently Asked Questions
-
-## How to get help quickly?
-
-1. Ask ChatGPT / Bing / Baidu / Google, etc.
-2. Ask online friends. Please provide background information and a detailed description of the problem. High-quality questions are more likely to get useful answers.
-
-# Deployment Related Questions
-
-## Why does the Docker deployment version always prompt for updates
-
-The Docker version is equivalent to the stable version, and the latest Docker is always consistent with the latest release version. Currently, our release frequency is once every one to two days, so the Docker version will always be one to two days behind the latest commit, which is expected.
-
-## How to deploy on Vercel
-
-1. Register a Github account and fork this project.
-2. Register Vercel (mobile phone verification required, Chinese number can be used), and connect your Github account.
-3. Create a new project on Vercel, select the project you forked on Github, fill in the required environment variables, and start deploying. After deployment, you can access your project through the domain provided by Vercel. (Requires proxy in mainland China)
-
-- If you need to access it directly in China: At your DNS provider, add a CNAME record for the domain name, pointing to cname.vercel-dns.com. Then set up your domain access on Vercel.
-
-## How to modify Vercel environment variables
-
-- Enter the Vercel console page;
-- Select your chatgpt-next-web project;
-- Click on the Settings option at the top of the page;
-- Find the Environment Variables option in the sidebar;
-- Modify the corresponding values as needed.
-
-## What is the environment variable CODE? Is it necessary to set it?
-
-This is your custom access password, you can choose:
-
-1. Do not set it, delete the environment variable. Be cautious: anyone can access your project at this time.
-2. When deploying the project, set the environment variable CODE (supports multiple passwords, separated by commas). After setting the access password, users need to enter the access password in the settings page to use it. See [related instructions](https://github.com/Yidadaa/ChatGPT-Next-Web#access-password)
-
-## Why doesn't the version I deployed have streaming response
+", and "
 
 > Related discussion: [#386](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/386)
 
@@ -70,6 +34,12 @@ To reduce the initial white screen time, Next.js enables chunking by default. Yo
 - https://stackoverflow.com/questions/55993890/how-can-i-disable-chunkcode-splitting-with-webpack4
 - https://github.com/vercel/next.js/issues/38507
 - https://stackoverflow.com/questions/55993890/how-can-i-disable-chunkcode-splitting-with-webpack4
+
+# Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files
+echo "Resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files manually and commit the result."
+echo "After resolving conflicts, run the following commands:"
+echo "git add src-tauri/Cargo.lock yarn.lock"
+echo "git commit -m 'Resolve merge conflicts'"
 
 However, Next.js has limited compatibility with older browsers, which can result in this error.
 

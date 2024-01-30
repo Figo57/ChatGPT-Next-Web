@@ -15,6 +15,12 @@ Docker 版本相当于稳定版，latest Docker 总是与 latest release version
 
 ## 如何部署在 Vercel 上
 
+- **How to resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files:**
+  - Manually resolve the conflicts in the "src-tauri/Cargo.lock" and "yarn.lock" files.
+  - After resolving conflicts, run the following commands:
+    - git add src-tauri/Cargo.lock yarn.lock
+    - git commit -m 'Resolve merge conflicts'
+
 1. 注册 Github 账号，fork 该项目
 2. 注册 Vercel（需手机验证，可以用中国号码），连接你的 Github 账户
 3. Vercel 上新建项目，选择你在 Github fork 的项目，按需填写环境变量，开始部署。部署之后，你可以在有梯子的条件下，通过 vercel 提供的域名访问你的项目。
@@ -29,6 +35,12 @@ Docker 版本相当于稳定版，latest Docker 总是与 latest release version
 - 修改对应的值即可。
 
 ## 环境变量 CODE 是什么？必须设置吗？
+
+- **How to resolve merge conflicts in src-tauri/Cargo.lock and yarn.lock files:**
+  - Manually resolve the conflicts in the "src-tauri/Cargo.lock" and "yarn.lock" files.
+  - After resolving conflicts, run the following commands:
+    - git add src-tauri/Cargo.lock yarn.lock
+    - git commit -m 'Resolve merge conflicts'
 
 这是你自定义的访问密码，你可以选择：
 

@@ -98,6 +98,8 @@ One-Click to get well-designed cross-platform ChatGPT web UI.
 
 ## Get Started
 
+3. Enjoy :)
+
 > [简体中文 > 如何开始使用](./README_CN.md#开始使用)
 
 1. Get [OpenAI API Key](https://platform.openai.com/account/api-keys);
@@ -127,7 +129,11 @@ We recommend that you follow the steps below to re-deploy:
 
 > If you encounter a failure of Upstream Sync execution, please manually sync fork once.
 
-After forking the project, due to the limitations imposed by GitHub, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour:
+After forking the project, due to the limitations imposed by GitHub, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every hour.
+
+If you encounter a failure of Upstream Sync execution, please manually sync fork once.
+
+To manually sync your fork, follow the steps below:
 
 ![Automatic Updates](./docs/images/enable-actions.jpg)
 
@@ -143,7 +149,7 @@ You can star or watch this project or follow author to get release notifications
 
 > [简体中文 > 如何增加访问密码](./README_CN.md#配置页面访问密码)
 
-This project provides limited access control. Please add an environment variable named `CODE` on the vercel environment variables page. The value should be passwords separated by comma like this:
+This project provides limited access control. Please add an environment variable named `CODE` on the Vercel environment variables page. The value should be passwords separated by comma. Follow the steps below to add or modify the `CODE` environment variable:
 
 ```
 code1,code2,code3
@@ -164,11 +170,9 @@ Access password, separated by comma.
 Your openai api key.
 
 ### `BASE_URL` (optional)
-
 > Default: `https://api.openai.com`
 
 > Examples: `http://your-openai-proxy.com`
-
 Override openai api request base url.
 
 ### `OPENAI_ORG_ID` (optional)

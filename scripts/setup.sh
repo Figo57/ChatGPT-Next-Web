@@ -60,7 +60,7 @@ yarn install
 
 # Prompt user for environment variables
 read -p "Enter OPENAI_API_KEY: " OPENAI_API_KEY
-read -p "Enter CODE: " CODE
+read -p "Enter CODE (passwords separated by comma): " CODE
 read -p "Enter PORT: " PORT
 
 # Build and run the project using the environment variables

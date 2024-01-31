@@ -98,6 +98,8 @@ One-Click to get well-designed cross-platform ChatGPT web UI.
 
 ## Get Started
 
+3. Enjoy :)
+
 > [简体中文 > 如何开始使用](./README_CN.md#开始使用)
 
 1. Get [OpenAI API Key](https://platform.openai.com/account/api-keys);
@@ -147,7 +149,7 @@ You can star or watch this project or follow author to get release notifications
 
 > [简体中文 > 如何增加访问密码](./README_CN.md#配置页面访问密码)
 
-This project provides limited access control. Please add an environment variable named `CODE` on the vercel environment variables page. The value should be passwords separated by comma like this:
+This project provides limited access control. Please add an environment variable named `CODE` on the Vercel environment variables page. The value should be passwords separated by comma. Follow the steps below to add or modify the `CODE` environment variable:
 
 ```
 code1,code2,code3

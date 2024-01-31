@@ -168,7 +168,6 @@ Access password, separated by comma.
 Your openai api key.
 
 ### `BASE_URL` (optional)
-
 > Default: `https://api.openai.com`
 
 > Examples: `http://your-openai-proxy.com`
